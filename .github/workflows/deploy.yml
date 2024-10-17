@@ -31,9 +31,9 @@ jobs:
           tags: |
 
       - name: Build and push to docker hub
-          uses: docker/build-push-action@v6
-          with:
-            context: .
-            platform: linux/x86_64
-            push: true
-            tags: ${{ steps.meta.outputs.tags }}
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platform: linux/x86_64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
